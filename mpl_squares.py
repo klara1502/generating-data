@@ -1,3 +1,8 @@
+"""
+Let's plot a simple line graph using matplotlib, and then customize it
+it to create a more informative visualization of our data.
+"""
+
 import matplotlib.pyplot as plt
 
 input_values = [1, 2, 3, 4, 5]
