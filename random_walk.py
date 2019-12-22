@@ -8,22 +8,22 @@ a series of random decisions, each of which is left entirely to chance.
 from random import choice
 
 class RandomWalk():
-  # A class to generate random walks
+    # A class to generate random walks
 
-  def __init__(self, num_points = 500):
-    # Initialize attributes of a walk
-    self.num_points = num_points
+    def __init__(self, num_points = 5000):
+        # Initialize attributes of a walk
+        self.num_points = num_points
 
-    # A walk start a (0, 0)
-    self.x_values = [0]
-    self.y_values = [0]
+        # A walk start a (0, 0)
+        self.x_values = [0]
+        self.y_values = [0]
 
     def fill_walk(self):
-    # Calculate all the points in the walk
+        # Calculate all the points in the walk
 
         # Keep taking steps until the walk reaches the desired length.
         while len(self.x_values) < self.num_points:
-        # Decide which derection to go and how far to go in the direction.
+            # Decide which derection to go and how far to go in the direction.
             x_direction = choice([1, -1])
             x_distance = choice([0, 1, 2, 3, 4])
             x_step = x_direction * x_distance
@@ -36,9 +36,9 @@ class RandomWalk():
             if x_step == 0 and y_step == 0:
                 continue
 
-            # Calculate the next x and y values.
-            next_x = self.x_values[-1] + x_step
-            next_y = self.y_values[-1] + y_step
+                # Calculate the next x and y values.
+                next_x = self.x_values[-1] + x_step
+                next_y = self.y_values[-1] + y_step
 
-            self.x_values.append(next_x)
-            self.y_values.append(next_y)
+                self.x_values.append(next_x)
+                self.y_values.append(next_y)
