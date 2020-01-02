@@ -15,7 +15,11 @@ class RandomWalk():
         """Calculate all the points in the walk."""
 
         # Keep taking steps until the walk reaches the desired length.
+<<<<<<< HEAD
         while len(self.x_values) < self.num_points:
+=======
+        while len(self.x_values) < self.num_points
+>>>>>>> 5d48244028fe94103b39e8a9f7bd8be2656f4514
             # Decide which direction to go and how far to go in that direction.
             x_direction = choice([1, -1])
             x_distance = choice([0,1, 2, 3, 4])
